@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Work Sans', sans-serif;
+    min-height: 100vh;
+    padding-top: 3%;
+}
+
+.standard {
+    background-image: linear-gradient(100deg, #575656, #062e3f);
+    color: #ffdfdb;
+    transition: 0.3s linear;
+    overflow: hidden;
+}
+
+#header h1 {
+    color: rgba(255, 255, 255, 0.0);
+    margin-right: 2px;
+}
+
+.animated-text::after {
+    content: "";
+    color: #ffff;
+    animation: title 5s linear 0s infinite normal both;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes title{
+    0% { content: ""; }
+    4.545454545454545% { content: "J|"; }
+    9.09090909090909% { content: "JU|"; }
+    13.63636363636364% { content: "JUS|"; }
+    18.18181818181818% { content: "JUST|"; }
+    22.72727272727273% { content: "JUST |"; }
+    27.27272727272728% { content: "JUST D|"; }
+    31.81818181818182% { content: "JUST DO|"; }
+    36.36363636363637% { content: "JUST DO |"; }
+    40.90909090909091% { content: "JUST DO I|"; }
+    45.45454545454546% { content: "JUST DO IT|"; }
+    50% { content: "JUST DO IT.|"; }
+    54.54545454545455% { content: "JUST DO IT|"; }
+    59.09090909090909% { content: "JUST DO I|"; }
+    63.63636363636364% { content: "JUST DO |"; }
+    68.18181818181818% { content: "JUST DO|"; }
+    72.72727272727273% { content: "JUST D|"; }
+    77.27272727272727% { content: "JUST |"; }
+    81.81818181818182% { content: "JUST|"; }
+    86.36363636363636% { content: "JUS|"; }
+    90.90909090909091% { content: "JU|"; }
+    95.45454545454545% { content: "J|"; }
+    100% { content: "|"; }
+}
+
+.flexrow-container {
+    align-items: center;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 3%;
+}
+
+.theme-selector {
+    border: 1px solid #d1dae3;
+    border-radius: 100%;
+    height: 35px;
+    margin: 0 8px;
+    transition: tranform 150ms ease-in-out, box-shadow 200ms ease-in-out;
+    width: 35px;
+}
+
+.theme-selector:hover { 
+    box-shadow: white 0 0 8px;
+    cursor: pointer;
+}
+
+.theme-selector:active {
+    transform: scale(0.95);
+}
+
+.standard-theme {
+    background-image: linear-gradient(100deg, #575656, #062e3f);
+}
+
+#header h1{
+    margin-top: 100px;
+}
+
+form {
+    display: flex;
+    font-size: 1.7rem;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+form input {
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
+    max-width: 500px;
+    transition: background-color 200ms ease-in-out;
+    width: 100%;
+}
+
+form input.standard-input {
+    background-color: #181a1a;
+    color: rgb(247, 226, 223);
+}
+
+form input:hover {
+    cursor: text;
+}
+
+form input.standard-input:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+form input.light-input:hover {
+    background-color: #919699;
+}
+
+form input.darker-input:hover {
+    background-color: #013141;
+}
+
+button {
+    border: none;
+    outline: none; 
+    transition: box-shadow 200ms ease, background-color 200ms ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button.standard-button {
+    background-color: rgb(153, 153, 153);
+    color: rgb(0, 0, 0);
+}
+
+button.standard-button:hover {
+    background-color: white;
+    box-shadow: #fff8 0 0 10px;
+}
+
+form button {
+    padding: 10px;
+    font-size: 17px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    min-width: 100px;
+}
+
+#myUnOrdList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.todo-list {
+    min-width: 25%;
+    list-style: none;
+}
+
+.todo {
+    margin: 1rem;
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25em 0.5em;
+    border-radius: 30px;
+}
+
+.standard-todo {
+    background-color: rgb(26, 27, 27);
+}
+
+.todo li{
+    padding: 7px;
+    font-size: 20px;
+    flex: 1; 
+    border-radius: 30px;
+}
+
+.check-btn, .delete-btn {
+    font-size: 19px;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+    border-radius: 80%;
+    margin: 0 5px;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check { 
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
